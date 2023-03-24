@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+
+    <title>Responsive Table</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if !IE]><!-->
+    <style>
+        @media only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px) {
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+            td:nth-of-type(1):before {
+                content: "Position - ";
+            }
+            td:nth-of-type(2):before {
+                content: "Starting Players - ";
+            }
+        }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            body {
+                padding: 0;
+                margin: 0;
+                width: 320px;
+            }
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            body {
+                width: 495px;
+            }
+        }
+        table {
+			border: 2px solid black;
+			background-color: lightgrey;
+			margin: 0 auto;
+		}
+		td {
+			padding: 10px;
+			text-align: center;
+		}
+		th {
+			padding: 10px;
+			background-color: darkgrey;
+			color: white;
+            text-align: center;
+		}
+    </style>
+    <!--<![endif]-->
+</head>
+<body>
+    <div id="page-wrap">
+        <h1>My Favorite Sports Team</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Starting Players</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Forward</td>
+                    <td>John Smith</td>
+                </tr>
+                <tr>
+                    <td>Forward</td>
+                    <td>Jane Doe</td>
+                </tr>
+                <tr>
+                    <td>Midfielder</td>
+                    <td>Mike Johnson</td>
+                </tr>
+                <tr>
+                    <td>Midfielder</td>
+                    <td>Lisa Williams</td>
+                </tr>
+                <tr>
+                    <td>Defender</td>
+                    <td>Tom Brown</td>
+                </tr>
+                <tr>
+                    <td>Defender</td>
+                    <td>Emma Lee</td>
+                </tr>
+                <tr>
+                    <td>Goalkeeper</td>
+                    <td>Chris Davis</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If you have any questions or comments, please email me at <a href="mailto:hsanthoshjayen6390@conestogac.on.ca">hsanthoshjayen6390@conestogac.on.ca</a>.</p>
+    </div>
+</body>
+</html>
